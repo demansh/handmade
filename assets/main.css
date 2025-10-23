@@ -16,6 +16,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% высоты окна */
+}
+
+.page-content {
+  /* Говорим контенту растянуться и занять все свободное место */
+  flex: 1; 
 }
 
 /* * Блок .wrapper (по умолчанию, для мобильных) */
@@ -179,38 +187,63 @@ a.product-card:visited {
   }
 }
 
-/* * ========================================
+/* 
+ * ========================================
  * СТИЛИ ДЛЯ ХЭДЕРА И ФУТЕРА
  * ========================================
 */
 
+/* --- ХЭДЕР --- */
+
 .site-header {
   background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.site-title,
-.site-title:visited {
-  font-size: 1.5rem;
-  font-weight: 700; /* Жирное начертание Montserrat */
+/* Новый класс для выравнивания хэдера */
+.header-flex-container {
+  display: flex;
+  justify-content: space-between; /* Раскидываем по сторонам */
+  align-items: center; /* Центрируем по вертикали */
+}
+
+/* Логотип "Made in Armenia" */
+.site-logo,
+.site-logo:visited {
+  font-size: 1.2rem; /* Чуть меньше, чем был заголовок */
+  font-weight: 700; 
   color: #333;
   text-decoration: none;
-  display: block;
-  text-align: center; /* Центрируем, если нет меню */
 }
 
+/* Навигация (справа) */
+.site-nav a,
+.site-nav a:visited {
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 25px; /* Отступ между "Каталог" и "О нас" */
+}
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* --- ФУТЕР --- */
+
 .site-footer {
-  background-color: #f9f9f9;
-  border-top: 1px solid #e0e0e0;
+  /* background-color: #f9f9f9; (Убрали фон) */
+  /* border-top: 1px solid #e0e0e0; (Убрали линию) */
   padding: 30px 0;
-  margin-top: 40px; /* Отступ от контента */
+  margin-top: 40px; /* Отступ сверху оставим, чтобы контент не лип */
 }
 
 .footer-text {
   text-align: center;
   color: #777;
-  font-size: 0.9rem;
+  font-size: 0.8rem; /* Сделали текст меньше */
   margin: 0;
 }
