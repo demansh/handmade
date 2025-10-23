@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="product-page-wrapper">
+  
+  <a href="{{ "/" | relative_url }}" class="back-link">&larr; Назад в каталог</a>
+
+  <div class="product-page">
+    
+    <div class="product-page-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    </div>
+
+    <div class="product-page-info">
+      <h1>{{ page.title }}</h1>
+      
+      <div class="price">{{ page.price_display }}</div>
+      
+      <div class="description">
+        {{ page.description }}
+      </div>
+      
+      <div class="full-description">
+        {{ content }}
+      </div>
+
+      </div>
+  </div>
+</div>

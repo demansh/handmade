@@ -1,0 +1,216 @@
+/* ---
+   Front Matter.
+--- */
+
+/* * ========================================
+ * БАЗОВЫЕ СТИЛИ
+ * ========================================
+*/
+
+body {
+  /* Говорим всему сайту использовать новый шрифт */
+  font-family: 'Montserrat', sans-serif;
+  
+  /* Это необязательно, но делает шрифт чуть более гладким */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+}
+
+/* * Блок .wrapper (по умолчанию, для мобильных) */
+.wrapper {
+  max-width: 900px; 
+  margin-left: auto;  
+  margin-right: auto; 
+  
+  /* По умолчанию (на мобильных) отступов нет */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 1. Сетка (таблица) товаров */
+.product-grid {
+  display: grid;
+  
+  /* * ИЗМЕНЕНО: Добавили отступ только между рядами */
+  row-gap: 35px;    
+  column-gap: 1px;  
+  
+  padding: 0;
+  list-style: none;
+  
+  /* * Сетка ВСЕГДА 3 колонки */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 2. Сама карточка товара */
+.product-card {
+  border-radius: 0;      
+  overflow: hidden;      
+  box-shadow: none;        
+}
+
+/* 3. Блок для КВАДРАТНОЙ картинки */
+.product-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  background-color: #f9f9f9; 
+}
+
+/* 4. Сама картинка внутри блока */
+.product-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* 5. Текстовая информация под картинкой */
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+/* 6. Название - СКРЫТО */
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 8px;
+  display: none; /* <-- СКРЫТО */
+}
+
+/* 7. Цена - ВИДНА */
+.product-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* 8. Описание - СКРЫТО */
+.product-description {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+  display: none; /* <-- СКРЫТО */
+}
+
+/* * ========================================
+ * СТИЛИ ДЛЯ СТРАНИЦЫ ТОВАРА
+ * ========================================
+*/
+
+/* Убираем синий цвет и подчеркивание у ссылок-карточек */
+a.product-card,
+a.product-card:visited {
+  text-decoration: none;
+  color: inherit; /* Цена останется черной */
+}
+
+/* Обертка страницы товара (центрирование) */
+.product-page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #555;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Стили для страницы одного товара */
+.product-page-image img {
+  width: 100%;
+  height: auto;
+  /* Можно убрать aspect-ratio, если фото не квадратные */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #f9f9f9;
+}
+
+.product-page-info h1 {
+  font-size: 2.2rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.product-page-info .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.product-page-info .description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 25px;
+}
+
+.product-page-info .full-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  padding-top: 25px;
+}
+
+
+/* Адаптация для десктопа (2 колонки на странице товара) */
+@media (min-width: 700px) {
+  .product-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+  }
+}
+
+/* * ========================================
+ * СТИЛИ ДЛЯ ХЭДЕРА И ФУТЕРА
+ * ========================================
+*/
+
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.site-title,
+.site-title:visited {
+  font-size: 1.5rem;
+  font-weight: 700; /* Жирное начертание Montserrat */
+  color: #333;
+  text-decoration: none;
+  display: block;
+  text-align: center; /* Центрируем, если нет меню */
+}
+
+.site-footer {
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  padding: 30px 0;
+  margin-top: 40px; /* Отступ от контента */
+}
+
+.footer-text {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin: 0;
+}
