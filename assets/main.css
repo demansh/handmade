@@ -188,6 +188,53 @@ a.product-card:visited {
   padding-top: 25px;
 }
 
+/* * ========================================
+ * СТИЛИ ДЛЯ БЛОКА "КАК КУПИТЬ" (НА СТР. ТОВАРА)
+ * ========================================
+*/
+.product-contact-box {
+  /* Отступ от галереи/описания сверху */
+  margin-top: 50px; 
+  /* Отделим блок линией */
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+  text-align: left;
+}
+
+/* * Мы используем .footer-contact, но нам надо
+ * убрать его внешний отступ, который был задан в футере
+*/
+.product-contact-box .footer-contact {
+  margin-bottom: 0;
+  /* Увеличим отступ между ссылками в столбике */
+  gap: 15px;
+}
+
+.contact-title {
+  /* Уменьшим шрифт с мобильного */
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.contact-note {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.product-contact-links {
+  display: flex;
+  flex-direction: column;   /* Всегда в столбик */
+  align-items: flex-start; /* Выравнивание по левому краю */
+  gap: 15px;               /* Отступ между ссылками */
+}
+
+.product-contact-links .contact-link span {
+  font-weight: 700; /* 700 - это 'bold' (жирный) */
+}
 
 /* Адаптация для десктопа */
 @media (min-width: 900px) {
