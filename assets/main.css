@@ -37,6 +37,18 @@ body {
   padding-right: 0;
 }
 
+/* * Новый контейнер (для текстовых страниц) */
+.text-container {
+  /* Центрирование и ограничение (как у wrapper) */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* А вот и отступы (которые будут ВСЕГДА) */
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 /* 1. Сетка (таблица) товаров */
 .product-grid {
   display: grid;
@@ -186,7 +198,7 @@ a.product-card:visited {
     align-items: flex-start;
   }
 
-.wrapper {
+  .wrapper {
     padding-left: 25px;
     padding-right: 25px;
   }
