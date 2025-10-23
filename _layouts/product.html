@@ -6,8 +6,18 @@ layout: default
 
   <div class="product-page">
     
-    <div class="product-page-image">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    <div class="product-page-image splide" role="group" aria-label="Галерея фотографий товара">
+      <div class="splide__track">
+        <ul class="splide__list">
+
+          {% for img_file in page.gallery_images %}
+            <li class="splide__slide">
+              <img src="{{ page.gallery_path | relative_url }}{{ img_file }}" alt="{{ page.title }} - фото">
+            </li>
+          {% endfor %}
+
+        </ul>
+      </div>
     </div>
 
     <div class="product-page-info">
@@ -26,3 +36,19 @@ layout: default
       </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    // Ищем карусель на этой странице по классу .splide
+    var splide = new Splide( '.splide', {
+      type       : 'loop', // Бесконечная прокрутка
+      perPage    : 1,      // По 1 слайду
+      autoplay   : false,  // Не проигрывать автоматом
+      arrows     : true,   // Показываем стрелки (для десктопа)
+      pagination : true,   // Показываем точки-буллеты
+    } );
+    
+    // Запускаем карусель
+    splide.mount();
+  } );
+</script>
