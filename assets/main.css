@@ -271,6 +271,40 @@ a.product-card:visited {
   margin: 0;
 }
 
+.footer-contact {
+  text-align: center;
+  margin-bottom: 20px; /* Отступ от текста копирайта */
+}
+
+.contact-link,
+.contact-link:visited {
+  color: #555; /* Тот же цвет, что у навигации */
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 0 10px; /* Отступы между ссылками */
+  display: inline-flex;  /* Превращаем ссылку во flex-контейнер */
+  align-items: center;    /* Выравниваем по вертикали */
+  vertical-align: middle;
+}
+
+.contact-link > span {
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px; /* Отступ иконки от текста */
+  
+  /* Иконка будет того же цвета, что и текст ссылки */
+  fill: currentColor; 
+}
+
 /* * ========================================
  * СТИЛИ ДЛЯ КАРУСЕЛИ (SPLIDE.JS)
  * ========================================
