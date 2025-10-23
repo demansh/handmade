@@ -32,7 +32,7 @@ body {
   margin-left: auto;  
   margin-right: auto; 
   
-  /* По умолчанию (на мобильных) отступов нет */
+  /* ПРАВИЛЬНО: Отступов нет (для мобильных) */
   padding-left: 0;
   padding-right: 0;
 }
@@ -177,13 +177,18 @@ a.product-card:visited {
 }
 
 
-/* Адаптация для десктопа (2 колонки на странице товара) */
-@media (min-width: 700px) {
+/* Адаптация для десктопа */
+@media (min-width: 900px) {
   .product-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: flex-start;
+  }
+
+.wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -199,15 +204,21 @@ a.product-card:visited {
   background-color: #ffffff;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 /* Новый класс для выравнивания хэдера */
-.header-flex-container {
+.header-container {
+  /* Новые правила для отступов */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 25px;  /* Отступ для хэдера (всегда) */
+  padding-right: 25px; /* Отступ для хэдера (всегда) */
+  
+  /* Старые правила для выравнивания */
   display: flex;
-  justify-content: space-between; /* Раскидываем по сторонам */
-  align-items: center; /* Центрируем по вертикали */
+  justify-content: space-between; 
+  align-items: center; 
 }
 
 /* Логотип "Made in Armenia" */
