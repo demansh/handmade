@@ -329,13 +329,13 @@ a.product-card:visited {
 }
 
 .contact-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 6px; /* Отступ иконки от текста */
-  
-  /* Иконка будет того же цвета, что и текст ссылки */
-  fill: currentColor; 
+  font-size: 1.1rem;
+  width: 20px; 
+  margin-right: 6px; 
+  color: currentColor; 
 }
+
+
 
 /* * ========================================
  * СТИЛИ ДЛЯ КАРУСЕЛИ (SPLIDE.JS)
