@@ -2,16 +2,14 @@
    Front Matter.
 --- */
 
-/* * ========================================
+/* 
+ * ========================================
  * БАЗОВЫЕ СТИЛИ
  * ========================================
 */
 
 body {
-  /* Говорим всему сайту использовать новый шрифт */
   font-family: 'Montserrat', sans-serif;
-
-  /* Это необязательно, но делает шрифт чуть более гладким */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
@@ -22,12 +20,11 @@ body {
 }
 
 .page-content {
-  /* Говорим контенту растянуться и занять все свободное место */
   flex: 1;
 }
 
 .page-title {
-  font-size: 1.8rem; /* (Можете поменять) */
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
   color: #333;
@@ -40,20 +37,15 @@ body {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-
-  /* ПРАВИЛЬНО: Отступов нет (для мобильных) */
   padding-left: 0;
   padding-right: 0;
 }
 
-/* * Новый контейнер (для текстовых страниц) */
+/* * контейнер (для текстовых страниц) */
 .text-container {
-  /* Центрирование и ограничение (как у wrapper) */
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-
-  /* А вот и отступы (которые будут ВСЕГДА) */
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -61,19 +53,14 @@ body {
 /* 1. Сетка (таблица) товаров */
 .product-grid {
   display: grid;
-
-  /* * ИЗМЕНЕНО: Добавили отступ только между рядами */
   row-gap: 1px;
   column-gap: 1px;
-
   padding: 0;
   list-style: none;
-
-  /* * Сетка ВСЕГДА 3 колонки */
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* 2. Сама карточка товара */
+/* 2. карточка товара */
 .product-card {
   border-radius: 0;
   overflow: hidden;
@@ -88,7 +75,7 @@ body {
   background-color: #f9f9f9;
 }
 
-/* 4. Сама картинка внутри блока */
+/* 4. картинка внутри блока */
 .product-image img {
   position: absolute;
   top: 0;
@@ -121,16 +108,9 @@ body {
   margin-top: 0;
   margin-bottom: 3px;
   padding-bottom: 3px;
-  /* 1. УБИРАЕМ НАСТОЯЩУЮ ТЕНЬ */
   box-shadow: none;
-
-  /* 2. ГОТОВИМ БЛОК К ДОБАВЛЕНИЮ ПСЕВДО-ЭЛЕМЕНТА */
   position: relative;
-  
-  /* 3. Ставим белый фон поверх будущей тени */
   z-index: 2; 
-
-  /* 4. (Убери сжатие, если оно было) */
   width: auto;
   margin: 0;
 }
@@ -160,7 +140,8 @@ body {
   /* <-- СКРЫТО */
 }
 
-/* * ========================================
+/*
+ * ========================================
  * СТИЛИ ДЛЯ СТРАНИЦЫ ТОВАРА
  * ========================================
 */
@@ -228,7 +209,8 @@ a.product-card:visited {
   border-top: 1px solid #eee;
 }
 
-/* * ========================================
+/*
+ * ========================================
  * СТИЛИ ДЛЯ БЛОКА "КАК КУПИТЬ" (НА СТР. ТОВАРА)
  * ========================================
 */
@@ -244,12 +226,8 @@ a.product-card:visited {
   border-radius: 8px;
 }
 
-/* * Мы используем .footer-contact, но нам надо
- * убрать его внешний отступ, который был задан в футере
-*/
 .product-contact-box .footer-contact {
   margin-bottom: 0;
-  /* Увеличим отступ между ссылками в столбике */
   gap: 15px;
 }
 
@@ -271,11 +249,8 @@ a.product-card:visited {
 .product-contact-links {
   display: flex;
   flex-direction: column;
-  /* Всегда в столбик */
   align-items: flex-start;
-  /* Выравнивание по левому краю */
   gap: 15px;
-  /* Отступ между ссылками */
 }
 
 .product-contact-links .contact-link span {
@@ -297,18 +272,12 @@ a.product-card:visited {
   padding-bottom: 20px;
 }
 
-/* Новый класс для выравнивания хэдера */
 .header-container {
-  /* Новые правила для отступов */
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 25px;
-  /* Отступ для хэдера (всегда) */
   padding-right: 25px;
-  /* Отступ для хэдера (всегда) */
-
-  /* Старые правила для выравнивания */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -318,7 +287,6 @@ a.product-card:visited {
 .site-logo,
 .site-logo:visited {
   font-size: 1.2rem;
-  /* Чуть меньше, чем был заголовок */
   font-weight: 700;
   color: #333;
   text-decoration: none;
@@ -335,8 +303,6 @@ a.product-card:visited {
   color: #555;
   text-decoration: none;
   font-size: 1rem;
-  /* 2. Убираем старый отступ, т.к. он теперь на разделителе */
-  /* margin-left: 25px; (Убрали) */
 }
 .site-nav a:hover {
   text-decoration: underline;
@@ -344,7 +310,7 @@ a.product-card:visited {
 
 /* 3. Стилизуем саму черту */
 .nav-divider {
-  color: #ddd; /* Светло-серый цвет */
+  color: #ddd;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -353,39 +319,30 @@ a.product-card:visited {
 /* --- ФУТЕР --- */
 
 .site-footer {
-  /* background-color: #f9f9f9; (Убрали фон) */
-  /* border-top: 1px solid #e0e0e0; (Убрали линию) */
   padding: 30px 0;
   margin-top: 40px;
-  /* Отступ сверху оставим, чтобы контент не лип */
 }
 
 .footer-text {
   text-align: center;
   color: #777;
   font-size: 0.8rem;
-  /* Сделали текст меньше */
   margin: 0;
 }
 
 .footer-contact {
   text-align: center;
   margin-bottom: 20px;
-  /* Отступ от текста копирайта */
 }
 
 .contact-link,
 .contact-link:visited {
   color: #555;
-  /* Тот же цвет, что у навигации */
   text-decoration: none;
   font-size: 0.9rem;
   margin: 0 10px;
-  /* Отступы между ссылками */
   display: inline-flex;
-  /* Превращаем ссылку во flex-контейнер */
   align-items: center;
-  /* Выравниваем по вертикали */
   vertical-align: middle;
 }
 
@@ -410,42 +367,35 @@ a.product-card:visited {
   color: currentColor;
 }
 
-/* * ========================================
+/* 
+ * ========================================
  * СТИЛИ ДЛЯ КАРУСЕЛИ (SPLIDE.JS)
  * ========================================
 */
 
-/* Мы применяем те же стили, что и для главной,
-  но теперь к каждому слайду
-*/
 .splide__slide img {
   width: 100%;
   height: 100%;
-  /* Занимает всю высоту слайда */
   aspect-ratio: 1 / 1;
-  /* Сохраняем квадрат */
   object-fit: cover;
-  /* Вписываем, обрезая лишнее */
   background: #f9f9f9;
 }
 
 /* Сделаем стрелки и точки поконтрастнее */
 .splide__arrow {
   background: rgba(0, 0, 0, 0.3);
-  /* Полупрозрачный фон */
 }
 
 .splide__arrow svg {
   fill: #ffffff;
-  /* Белая стрелка */
 }
 
 .splide__pagination__page.is-active {
   background: #000000;
-  /* Активная точка */
 }
 
-/* * ========================================
+/* 
+ * ========================================
  * СТИЛИ ДЛЯ КНОПКИ "ПОДЕЛИТЬСЯ"
  * ========================================
 */
@@ -456,18 +406,14 @@ a.product-card:visited {
   justify-content: center;
 
   background-color: #f0f0f0;
-  /* Светлый фон */
   color: #333;
-  /* Темный текст */
   border: 1px solid #ddd;
   border-radius: 8px;
 
   padding: 10px 15px;
   margin-top: 30px;
-  /* Отступ от контента сверху */
 
   font-family: 'Montserrat', sans-serif;
-  /* Наш шрифт */
   font-size: 0.9rem;
   font-weight: 600;
 

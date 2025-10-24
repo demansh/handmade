@@ -1,25 +1,25 @@
 <footer class="site-footer">
   <div class="wrapper">
-    
+
     <div class="footer-contact">
-      
+
       <a class="contact-link" href="https://t.me/{{ site.telegram_username }}" ...>
         <i class="contact-icon fa-brands fa-telegram"></i>
         <span>Telegram</span>
       </a>
-      
+
       <a class="contact-link" href="https://instagram.com/{{ site.instagram_username }}" ...>
         <i class="contact-icon fa-brands fa-instagram"></i>
         <span>Instagram</span>
       </a>
-      
+
       <a class="contact-link" href="tel:{{ site.phone_number }}">
         <i class="contact-icon fa-solid fa-phone"></i>
         <span>{{ site.phone_number }}</span>
       </a>
 
     </div>
-    
+
     <p class="footer-text">
       &copy; {{ "now" | date: "%Y" }} {{ site.title | escape }}. Все права защищены.
     </p>

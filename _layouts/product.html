@@ -56,15 +56,13 @@ layout: default
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Ищем карусель на этой странице по классу .splide
     var splide = new Splide('.splide', {
-      type: 'loop', // Бесконечная прокрутка
-      perPage: 1,      // По 1 слайду
-      autoplay: false,  // Не проигрывать автоматом
-      arrows: true,   // Показываем стрелки (для десктопа)
-      pagination: true,   // Показываем точки-буллеты
+      type: 'loop',
+      perPage: 1,
+      autoplay: false,
+      arrows: true,
+      pagination: true,
     });
-    // Запускаем карусель
     splide.mount();
   });
 </script>
@@ -72,9 +70,6 @@ layout: default
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const shareButton = document.getElementById('share-button');
-
-    // 1. Данные, которыми будем делиться
-    // Используем absolute_url, чтобы ссылка была полной
     const shareData = {
       title: '{{ page.title | escape }}',
       text: '{{ page.description | escape }}',
@@ -83,7 +78,6 @@ layout: default
 
     if (shareButton) {
       shareButton.addEventListener('click', async () => {
-        // 2. Проверяем, поддерживает ли браузер Web Share API (мобильные)
         if (navigator.share) {
           try {
             await navigator.share(shareData);
@@ -92,15 +86,13 @@ layout: default
             console.error('Share error: ', err);
           }
         } else {
-          // 3. Фолбэк для десктопа: Копируем ссылку
           try {
             await navigator.clipboard.writeText(shareData.url);
-            // Даем обратную связь
             const originalText = shareButton.querySelector('span').textContent;
             shareButton.querySelector('span').textContent = 'Скопировано!';
             setTimeout(() => {
               shareButton.querySelector('span').textContent = originalText;
-            }, 2000); // Возвращаем текст через 2 сек
+            }, 2000);
           } catch (err) {
             console.error('Failed to copy: ', err);
           }
