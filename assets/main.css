@@ -10,7 +10,7 @@
 body {
   /* Говорим всему сайту использовать новый шрифт */
   font-family: 'Montserrat', sans-serif;
-  
+
   /* Это необязательно, но делает шрифт чуть более гладким */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,20 +18,21 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* 100% высоты окна */
+  min-height: 100vh;
+  /* 100% высоты окна */
 }
 
 .page-content {
   /* Говорим контенту растянуться и занять все свободное место */
-  flex: 1; 
+  flex: 1;
 }
 
 /* * Блок .wrapper (по умолчанию, для мобильных) */
 .wrapper {
-  max-width: 900px; 
-  margin-left: auto;  
-  margin-right: auto; 
-  
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
   /* ПРАВИЛЬНО: Отступов нет (для мобильных) */
   padding-left: 0;
   padding-right: 0;
@@ -52,31 +53,31 @@ body {
 /* 1. Сетка (таблица) товаров */
 .product-grid {
   display: grid;
-  
+
   /* * ИЗМЕНЕНО: Добавили отступ только между рядами */
-  row-gap: 35px;    
-  column-gap: 1px;  
-  
+  row-gap: 35px;
+  column-gap: 1px;
+
   padding: 0;
   list-style: none;
-  
+
   /* * Сетка ВСЕГДА 3 колонки */
   grid-template-columns: repeat(3, 1fr);
 }
 
 /* 2. Сама карточка товара */
 .product-card {
-  border-radius: 0;      
-  overflow: hidden;      
-  box-shadow: none;        
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
 }
 
 /* 3. Блок для КВАДРАТНОЙ картинки */
 .product-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1; 
-  background-color: #f9f9f9; 
+  aspect-ratio: 1 / 1;
+  background-color: #f9f9f9;
 }
 
 /* 4. Сама картинка внутри блока */
@@ -86,7 +87,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 /* 5. Текстовая информация под картинкой */
@@ -101,7 +102,8 @@ body {
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 8px;
-  display: none; /* <-- СКРЫТО */
+  display: none;
+  /* <-- СКРЫТО */
 }
 
 /* 7. Цена - ВИДНА */
@@ -118,7 +120,8 @@ body {
   font-size: 0.8rem;
   color: #666;
   line-height: 1.4;
-  display: none; /* <-- СКРЫТО */
+  display: none;
+  /* <-- СКРЫТО */
 }
 
 /* * ========================================
@@ -130,7 +133,8 @@ body {
 a.product-card,
 a.product-card:visited {
   text-decoration: none;
-  color: inherit; /* Цена останется черной */
+  color: inherit;
+  /* Цена останется черной */
 }
 
 /* Обертка страницы товара (центрирование) */
@@ -146,6 +150,7 @@ a.product-card:visited {
   color: #555;
   text-decoration: none;
 }
+
 .back-link:hover {
   text-decoration: underline;
 }
@@ -194,7 +199,7 @@ a.product-card:visited {
 */
 .product-contact-box {
   /* Отступ от галереи/описания сверху */
-  margin-top: 50px; 
+  margin-top: 50px;
   /* Отделим блок линией */
   padding-top: 30px;
   border-top: 1px solid #eee;
@@ -227,13 +232,17 @@ a.product-card:visited {
 
 .product-contact-links {
   display: flex;
-  flex-direction: column;   /* Всегда в столбик */
-  align-items: flex-start; /* Выравнивание по левому краю */
-  gap: 15px;               /* Отступ между ссылками */
+  flex-direction: column;
+  /* Всегда в столбик */
+  align-items: flex-start;
+  /* Выравнивание по левому краю */
+  gap: 15px;
+  /* Отступ между ссылками */
 }
 
 .product-contact-links .contact-link span {
-  font-weight: 700; /* 700 - это 'bold' (жирный) */
+  font-weight: 700;
+  /* 700 - это 'bold' (жирный) */
 }
 
 /* 
@@ -256,20 +265,23 @@ a.product-card:visited {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 25px;  /* Отступ для хэдера (всегда) */
-  padding-right: 25px; /* Отступ для хэдера (всегда) */
-  
+  padding-left: 25px;
+  /* Отступ для хэдера (всегда) */
+  padding-right: 25px;
+  /* Отступ для хэдера (всегда) */
+
   /* Старые правила для выравнивания */
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Логотип "Made in Armenia" */
 .site-logo,
 .site-logo:visited {
-  font-size: 1.2rem; /* Чуть меньше, чем был заголовок */
-  font-weight: 700; 
+  font-size: 1.2rem;
+  /* Чуть меньше, чем был заголовок */
+  font-weight: 700;
   color: #333;
   text-decoration: none;
 }
@@ -280,8 +292,10 @@ a.product-card:visited {
   color: #555;
   text-decoration: none;
   font-size: 1rem;
-  margin-left: 25px; /* Отступ между "Каталог" и "О нас" */
+  margin-left: 25px;
+  /* Отступ между "Каталог" и "О нас" */
 }
+
 .site-nav a:hover {
   text-decoration: underline;
 }
@@ -293,33 +307,40 @@ a.product-card:visited {
   /* background-color: #f9f9f9; (Убрали фон) */
   /* border-top: 1px solid #e0e0e0; (Убрали линию) */
   padding: 30px 0;
-  margin-top: 40px; /* Отступ сверху оставим, чтобы контент не лип */
+  margin-top: 40px;
+  /* Отступ сверху оставим, чтобы контент не лип */
 }
 
 .footer-text {
   text-align: center;
   color: #777;
-  font-size: 0.8rem; /* Сделали текст меньше */
+  font-size: 0.8rem;
+  /* Сделали текст меньше */
   margin: 0;
 }
 
 .footer-contact {
   text-align: center;
-  margin-bottom: 20px; /* Отступ от текста копирайта */
+  margin-bottom: 20px;
+  /* Отступ от текста копирайта */
 }
 
 .contact-link,
 .contact-link:visited {
-  color: #555; /* Тот же цвет, что у навигации */
+  color: #555;
+  /* Тот же цвет, что у навигации */
   text-decoration: none;
   font-size: 0.9rem;
-  margin: 0 10px; /* Отступы между ссылками */
-  display: inline-flex;  /* Превращаем ссылку во flex-контейнер */
-  align-items: center;    /* Выравниваем по вертикали */
+  margin: 0 10px;
+  /* Отступы между ссылками */
+  display: inline-flex;
+  /* Превращаем ссылку во flex-контейнер */
+  align-items: center;
+  /* Выравниваем по вертикали */
   vertical-align: middle;
 }
 
-.contact-link > span {
+.contact-link>span {
   display: inline-block;
   margin-left: 6px;
 }
@@ -330,12 +351,10 @@ a.product-card:visited {
 
 .contact-icon {
   font-size: 1.1rem;
-  width: 20px; 
-  margin-right: 6px; 
-  color: currentColor; 
+  width: 20px;
+  margin-right: 6px;
+  color: currentColor;
 }
-
-
 
 /* * ========================================
  * СТИЛИ ДЛЯ КАРУСЕЛИ (SPLIDE.JS)
@@ -347,21 +366,29 @@ a.product-card:visited {
 */
 .splide__slide img {
   width: 100%;
-  height: 100%; /* Занимает всю высоту слайда */
-  aspect-ratio: 1 / 1; /* Сохраняем квадрат */
-  object-fit: cover; /* Вписываем, обрезая лишнее */
+  height: 100%;
+  /* Занимает всю высоту слайда */
+  aspect-ratio: 1 / 1;
+  /* Сохраняем квадрат */
+  object-fit: cover;
+  /* Вписываем, обрезая лишнее */
   background: #f9f9f9;
 }
 
 /* Сделаем стрелки и точки поконтрастнее */
 .splide__arrow {
-  background: rgba(0, 0, 0, 0.3); /* Полупрозрачный фон */
+  background: rgba(0, 0, 0, 0.3);
+  /* Полупрозрачный фон */
 }
+
 .splide__arrow svg {
-  fill: #ffffff; /* Белая стрелка */
+  fill: #ffffff;
+  /* Белая стрелка */
 }
+
 .splide__pagination__page.is-active {
-  background: #000000; /* Активная точка */
+  background: #000000;
+  /* Активная точка */
 }
 
 /* * ========================================
@@ -373,19 +400,23 @@ a.product-card:visited {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  
-  background-color: #f0f0f0; /* Светлый фон */
-  color: #333; /* Темный текст */
+
+  background-color: #f0f0f0;
+  /* Светлый фон */
+  color: #333;
+  /* Темный текст */
   border: 1px solid #ddd;
   border-radius: 8px;
-  
+
   padding: 10px 15px;
-  margin-top: 30px; /* Отступ от контента сверху */
-  
-  font-family: 'Montserrat', sans-serif; /* Наш шрифт */
+  margin-top: 30px;
+  /* Отступ от контента сверху */
+
+  font-family: 'Montserrat', sans-serif;
+  /* Наш шрифт */
   font-size: 0.9rem;
   font-weight: 600;
-  
+
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
