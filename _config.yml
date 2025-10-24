@@ -29,5 +29,4 @@ exclude:
   - vendor/ruby/
   - readme.md
   - LICENSE.md
-  - .DS_Store
   - .gitignore
