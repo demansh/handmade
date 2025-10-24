@@ -317,17 +317,28 @@ a.product-card:visited {
 }
 
 /* Навигация (справа) */
+.site-nav {
+  /* 1. Выравниваем ссылки и черту по вертикали */
+  display: flex;
+  align-items: center;
+}
 .site-nav a,
 .site-nav a:visited {
   color: #555;
   text-decoration: none;
   font-size: 1rem;
-  margin-left: 25px;
-  /* Отступ между "Каталог" и "О нас" */
+  /* 2. Убираем старый отступ, т.к. он теперь на разделителе */
+  /* margin-left: 25px; (Убрали) */
 }
-
 .site-nav a:hover {
   text-decoration: underline;
+}
+
+/* 3. Стилизуем саму черту */
+.nav-divider {
+  color: #ddd; /* Светло-серый цвет */
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 
@@ -376,6 +387,11 @@ a.product-card:visited {
 }
 
 .contact-link:hover {
+  text-decoration: none;
+}
+
+/* Добавляем подчеркивание только тексту (span) при наведении */
+.contact-link:hover span {
   text-decoration: underline;
 }
 
