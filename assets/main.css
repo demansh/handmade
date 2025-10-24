@@ -236,21 +236,6 @@ a.product-card:visited {
   font-weight: 700; /* 700 - это 'bold' (жирный) */
 }
 
-/* Адаптация для десктопа */
-@media (min-width: 900px) {
-  .product-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: flex-start;
-  }
-
-  .wrapper {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-}
-
 /* 
  * ========================================
  * СТИЛИ ДЛЯ ХЭДЕРА И ФУТЕРА
@@ -377,4 +362,60 @@ a.product-card:visited {
 }
 .splide__pagination__page.is-active {
   background: #000000; /* Активная точка */
+}
+
+/* * ========================================
+ * СТИЛИ ДЛЯ КНОПКИ "ПОДЕЛИТЬСЯ"
+ * ========================================
+*/
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: #f0f0f0; /* Светлый фон */
+  color: #333; /* Темный текст */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  
+  padding: 10px 15px;
+  margin-top: 30px; /* Отступ от контента сверху */
+  
+  font-family: 'Montserrat', sans-serif; /* Наш шрифт */
+  font-size: 0.9rem;
+  font-weight: 600;
+  
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.share-button:hover {
+  background-color: #e5e5e5;
+}
+
+.share-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+/* Адаптация для десктопа */
+@media (min-width: 900px) {
+  .product-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .share-button {
+    display: none;
+  }
 }
