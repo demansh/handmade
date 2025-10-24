@@ -19,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* 100% высоты окна */
 }
 
 .page-content {
@@ -112,9 +111,36 @@ body {
   font-weight: bold;
   color: #333;
   margin-top: 0;
-  margin-bottom: 6px;
-  padding-bottom: 6px;
-  box-shadow: 0 6px 5px -5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 3px;
+  padding-bottom: 3px;
+  /* 1. УБИРАЕМ НАСТОЯЩУЮ ТЕНЬ */
+  box-shadow: none;
+
+  /* 2. ГОТОВИМ БЛОК К ДОБАВЛЕНИЮ ПСЕВДО-ЭЛЕМЕНТА */
+  position: relative;
+  
+  /* 3. Ставим белый фон поверх будущей тени */
+  z-index: 2; 
+
+  /* 4. (Убери сжатие, если оно было) */
+  width: auto;
+  margin: 0;
+}
+
+.product-price::after {
+  content: "";
+  display: block;
+  position: absolute;  
+  width: 80%; 
+  left: 10%;  
+  height: 6px; 
+  bottom: -8px; 
+  background: radial-gradient(
+    ellipse at center top,
+    rgba(0, 0, 0, 0.1) 0%,
+    transparent 70%
+  );
+  z-index: 1;
 }
 
 /* 8. Описание - СКРЫТО */
