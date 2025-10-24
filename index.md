@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<h1 class="page-title">Авторские украшения ручной работы</h1>
 <div class="product-grid">
 
   {% for product in site.products %}

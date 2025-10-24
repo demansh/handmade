@@ -26,6 +26,15 @@ body {
   flex: 1;
 }
 
+.page-title {
+  font-size: 1.8rem; /* (Можете поменять) */
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
 /* * Блок .wrapper (по умолчанию, для мобильных) */
 .wrapper {
   max-width: 900px;
@@ -102,7 +111,6 @@ body {
   margin-top: 0;
   margin-bottom: 8px;
   display: none;
-  /* <-- СКРЫТО */
 }
 
 /* 7. Цена - ВИДНА */
