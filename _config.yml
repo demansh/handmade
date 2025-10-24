@@ -12,6 +12,8 @@ phone_number: "+374 00 000000"
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 collections:
   products:
