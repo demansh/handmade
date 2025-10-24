@@ -5,9 +5,9 @@ url: "https://demansh.github.io"
 baseurl: "/handmade"
 default_image: "/assets/images/og-image.jpg"
 
-telegram_username:
-instagram_username:
-phone_number:
+telegram_username: "username"
+instagram_username: "username"
+phone_number: "+374 00 000000"
 
 theme: minima
 plugins:

@@ -40,7 +40,7 @@ layout: default
   <div class="product-contact-box">
     <h3 class="contact-title">Свяжитесь с нами, чтобы купить данное изделие:</h3>
     <div class="product-contact-links">
-      <a class="contact-link" href="https://t.me/your_username" target="_blank" rel="noopener noreferrer">
+      <a class="contact-link" href="https://t.me/{{ site.telegram_username}}" target="_blank" rel="noopener noreferrer">
         <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           viewBox="0 0 16 16">
           <path
@@ -48,8 +48,8 @@ layout: default
         </svg>
         <span>Telegram</span>
       </a>
-      <a class="contact-link" href="tel:+37400123456">
-        ☎️<span>+374 (00) 12-34-56</span>
+      <a class="contact-link" href="tel:{{ site.phone_number}}">
+        ☎️<span>{{ site.phone_number}}</span>
       </a>
     </div>
     <p class="contact-note">Мы готовы внести любые изменения по вашим пожеланиям</p>
